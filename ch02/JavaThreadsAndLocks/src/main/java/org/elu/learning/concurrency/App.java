@@ -3,6 +3,7 @@ package org.elu.learning.concurrency;
 import org.elu.learning.concurrency.counting.Counting;
 import org.elu.learning.concurrency.counting.CountingAtomic;
 import org.elu.learning.concurrency.counting.CountingSynchronized;
+import org.elu.learning.concurrency.puzzle.Puzzle;
 
 public class App {
     public static void main(String[] args) throws InterruptedException {
@@ -12,6 +13,8 @@ public class App {
             CountingSynchronized.count();
         } else if ("ca".equalsIgnoreCase(name)) {
             CountingAtomic.count();
+        } else if ("pz".equalsIgnoreCase(name)) {
+            Puzzle.puzzle();
         } else {
             Counting.count();
         }
