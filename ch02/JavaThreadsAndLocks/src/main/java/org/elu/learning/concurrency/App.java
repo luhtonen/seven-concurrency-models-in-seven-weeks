@@ -4,6 +4,7 @@ import org.elu.learning.concurrency.counting.Counting;
 import org.elu.learning.concurrency.counting.CountingAtomic;
 import org.elu.learning.concurrency.counting.CountingSynchronized;
 import org.elu.learning.concurrency.downloader.HttpDownloader;
+import org.elu.learning.concurrency.interrupt.Uninterrutable;
 import org.elu.learning.concurrency.philosophers.DiningPhilosophers;
 import org.elu.learning.concurrency.puzzle.Puzzle;
 
@@ -11,7 +12,9 @@ public class App {
     public static void main(String[] args) throws Exception {
         String name = args[0];
 
-        if ("dw".equalsIgnoreCase(name)) {
+        if ("uin".equalsIgnoreCase(name)) {
+            Uninterrutable.doit();
+        } else if ("dw".equalsIgnoreCase(name)) {
             HttpDownloader.download();
         } else if ("dwf".equalsIgnoreCase(name)) {
             HttpDownloader.downloadFixed();
