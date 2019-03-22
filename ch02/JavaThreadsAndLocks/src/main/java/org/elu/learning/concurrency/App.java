@@ -4,7 +4,8 @@ import org.elu.learning.concurrency.counting.Counting;
 import org.elu.learning.concurrency.counting.CountingAtomic;
 import org.elu.learning.concurrency.counting.CountingSynchronized;
 import org.elu.learning.concurrency.downloader.HttpDownloader;
-import org.elu.learning.concurrency.interrupt.Uninterrutable;
+import org.elu.learning.concurrency.interrupt.Interruptible;
+import org.elu.learning.concurrency.interrupt.Uninterruptible;
 import org.elu.learning.concurrency.philosophers.DiningPhilosophers;
 import org.elu.learning.concurrency.puzzle.Puzzle;
 
@@ -13,7 +14,9 @@ public class App {
         String name = args[0];
 
         if ("uin".equalsIgnoreCase(name)) {
-            Uninterrutable.doit();
+            Uninterruptible.doit();
+        } else if ("in".equalsIgnoreCase(name)) {
+            Interruptible.doit();
         } else if ("dw".equalsIgnoreCase(name)) {
             HttpDownloader.download();
         } else if ("dwf".equalsIgnoreCase(name)) {

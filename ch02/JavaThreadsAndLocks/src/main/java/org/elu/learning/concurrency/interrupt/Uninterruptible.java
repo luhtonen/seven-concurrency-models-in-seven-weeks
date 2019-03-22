@@ -1,6 +1,6 @@
 package org.elu.learning.concurrency.interrupt;
 
-public class Uninterrutable {
+public class Uninterruptible {
     public static void doit() throws InterruptedException {
         final Object o1 = new Object();
         final Object o2 = new Object();
