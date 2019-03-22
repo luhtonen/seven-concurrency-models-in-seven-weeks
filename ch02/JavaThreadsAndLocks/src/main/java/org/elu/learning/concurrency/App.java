@@ -13,8 +13,9 @@ public class App {
 
         if ("dw".equalsIgnoreCase(name)) {
             HttpDownloader.download();
-        }
-        if ("dp".equalsIgnoreCase(name)) {
+        } else if ("dwf".equalsIgnoreCase(name)) {
+            HttpDownloader.downloadFixed();
+        } else if ("dp".equalsIgnoreCase(name)) {
             DiningPhilosophers.dine();
         } else if ("dpf".equalsIgnoreCase(name)) {
             DiningPhilosophers.dineFixed();
