@@ -12,6 +12,8 @@ public class App {
 
         if ("dp".equalsIgnoreCase(name)) {
             DiningPhilosophers.dine();
+        } else if ("dpf".equalsIgnoreCase(name)) {
+            DiningPhilosophers.dineFixed();
         } else if ("cs".equalsIgnoreCase(name)) {
             CountingSynchronized.count();
         } else if ("ca".equalsIgnoreCase(name)) {
