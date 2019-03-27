@@ -5,6 +5,7 @@ import org.elu.learning.concurrency.counting.CountingAtomic;
 import org.elu.learning.concurrency.counting.CountingSynchronized;
 import org.elu.learning.concurrency.downloader.HttpDownloader;
 import org.elu.learning.concurrency.echo.EchoServer;
+import org.elu.learning.concurrency.echo.EchoServerBetter;
 import org.elu.learning.concurrency.interrupt.Interruptible;
 import org.elu.learning.concurrency.interrupt.Uninterruptible;
 import org.elu.learning.concurrency.linkedList.MyLinkedList;
@@ -17,6 +18,8 @@ public class App {
 
         if ("es".equalsIgnoreCase(name)) {
             EchoServer.echo();
+        } else if ("esb".equalsIgnoreCase(name)) {
+            EchoServerBetter.echo();
         } else if ("ll".equalsIgnoreCase(name)) {
             MyLinkedList.list();
         } else if ("uin".equalsIgnoreCase(name)) {
