@@ -6,6 +6,7 @@ import org.elu.learning.concurrency.counting.CountingSynchronized;
 import org.elu.learning.concurrency.downloader.HttpDownloader;
 import org.elu.learning.concurrency.interrupt.Interruptible;
 import org.elu.learning.concurrency.interrupt.Uninterruptible;
+import org.elu.learning.concurrency.linkedList.MyLinkedList;
 import org.elu.learning.concurrency.philosophers.DiningPhilosophers;
 import org.elu.learning.concurrency.puzzle.Puzzle;
 
@@ -13,7 +14,9 @@ public class App {
     public static void main(String[] args) throws Exception {
         String name = args[0];
 
-        if ("uin".equalsIgnoreCase(name)) {
+        if ("ll".equalsIgnoreCase(name)) {
+            MyLinkedList.list();
+        } else if ("uin".equalsIgnoreCase(name)) {
             Uninterruptible.doit();
         } else if ("in".equalsIgnoreCase(name)) {
             Interruptible.doit();
