@@ -30,6 +30,8 @@ public class App {
             DiningPhilosophers.dineFixed();
         } else if ("dpt".equalsIgnoreCase(name)) {
             DiningPhilosophers.dineTimeout();
+        } else if ("dpc".equalsIgnoreCase(name)) {
+            DiningPhilosophers.dineCondition();
         } else if ("cs".equalsIgnoreCase(name)) {
             CountingSynchronized.count();
         } else if ("ca".equalsIgnoreCase(name)) {
