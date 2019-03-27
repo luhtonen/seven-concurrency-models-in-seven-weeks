@@ -1,6 +1,5 @@
 package org.elu.learning.concurrency.philosophers;
 
-import java.util.Random;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -10,20 +9,18 @@ public class PhilosopherCondition extends Thread {
     private PhilosopherCondition right;
     private ReentrantLock table;
     private Condition condition;
-    private Random random;
 
-    public PhilosopherCondition(ReentrantLock table) {
+    PhilosopherCondition(ReentrantLock table) {
         eating = false;
         this.table = table;
         condition = table.newCondition();
-        random = new Random();
     }
 
-    public void setLeft(PhilosopherCondition left) {
+    void setLeft(PhilosopherCondition left) {
         this.left = left;
     }
 
-    public void setRight(PhilosopherCondition right) {
+    void setRight(PhilosopherCondition right) {
         this.right = right;
     }
 
