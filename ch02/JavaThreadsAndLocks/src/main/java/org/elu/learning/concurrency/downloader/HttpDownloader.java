@@ -24,4 +24,15 @@ public class HttpDownloader {
         });
         downloader.join();
     }
+
+    public static void downloadBetter() throws Exception {
+        URL from = new URL("https://swapi.co/api/planets/2/");
+        DownloaderBetter downloader = new DownloaderBetter(from, "download.out");
+        downloader.start();
+        downloader.addListener(n -> {
+            System.out.print("\r" + n);
+            System.out.flush();
+        });
+        downloader.join();
+    }
 }
