@@ -11,12 +11,15 @@ import org.elu.learning.concurrency.interrupt.Uninterruptible;
 import org.elu.learning.concurrency.linkedList.MyLinkedList;
 import org.elu.learning.concurrency.philosophers.DiningPhilosophers;
 import org.elu.learning.concurrency.puzzle.Puzzle;
+import org.elu.learning.concurrency.wordcount.WordCount;
 
 public class App {
     public static void main(String[] args) throws Exception {
         String name = args[0];
 
-        if ("es".equalsIgnoreCase(name)) {
+        if ("wc".equalsIgnoreCase(name)) {
+            WordCount.count();
+        } else if ("es".equalsIgnoreCase(name)) {
             EchoServer.echo();
         } else if ("esb".equalsIgnoreCase(name)) {
             EchoServerBetter.echo();
