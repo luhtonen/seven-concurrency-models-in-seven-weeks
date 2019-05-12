@@ -19,6 +19,6 @@ public class WordCount {
     }
 
     private static void countWord(String word) {
-        counts.merge(word, 1, (a, b) -> a + b);
+      counts.merge(word, 1, Integer::sum);
     }
 }
